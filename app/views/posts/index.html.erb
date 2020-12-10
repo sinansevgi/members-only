@@ -5,18 +5,18 @@
 <div class="row">
 
   <div class="col-md-12">
-  <ul class="list-group">
-    <% @posts.each do |post| %>
-        <li class="list-group-item text-center">
-          <%= link_to post.title, post %>
-        <% if user_signed_in? %>
+    <ul class="list-group">
+      <% @posts.each do |post| %>
+          <li class="list-group-item text-center">
+            <%= link_to post.title, post %>
+            <% if user_signed_in? %>
             <small>
-           Posted by @<%= post.user.name %>
+              Posted by @<%= post.user.name %>
             </small>
-            </li>
+          </li>
+            <% end %>
       <% end %>
-          <% end %>
-          </ul>
+    </ul>
   </div>
-          </div>
+</div>
 
