@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
   before_action :set_post, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_user!, only: [:new, :create, :update]
+  before_action :authenticate_user!, only: [:new, :edit, :create, :update]
 
   # GET /posts
   # GET /posts.json
@@ -42,12 +42,16 @@ class PostsController < ApplicationController
   # PATCH/PUT /posts/1.json
   def update
     respond_to do |format|
-      if @post.update(post_params)
-        format.html { redirect_to @post, notice: 'Post was successfully updated.' }
-        format.json { render :show, status: :ok, location: @post }
+      if @post.user.id == current_user.id
+       if @post.update(post_params)
+         format.html { redirect_to @post, notice: 'Post was successfully updated.' }
+          format.json { render :show, status: :ok, location: @post }
+        else
+         format.html { render :edit }
+         format.json { render json: @post.errors, status: :unprocessable_entity }
+       end
       else
-        format.html { render :edit }
-        format.json { render json: @post.errors, status: :unprocessable_entity }
+        format.html { redirect_to :root, notice: 'You are not author of this post.' }
       end
     end
   end

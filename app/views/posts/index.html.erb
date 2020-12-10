@@ -1,24 +1,22 @@
-<p id="notice"><%= notice %></p>
 
-<h1>Posts</h1>
+<div class="text-center">
+  <h1>Welcome to Members Only</h1>
+</div>
+<div class="row">
 
-
+  <div class="col-md-12">
+  <ul class="list-group">
     <% @posts.each do |post| %>
-    <%= link_to post.title, post %>
-  
-    <% if user_signed_in? %>
-      <%= post.user.name %>
-      <td><%= link_to 'Edit', edit_post_path(post) %></td>
-      <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-    <% end %>
-  
-    <% end %>
-    
-    <br>
-    <% if user_signed_in? %>
-     <%= link_to 'New Post', new_post_path %>    
-    <% end %>
-    
-
-<br>
+        <li class="list-group-item text-center">
+          <%= link_to post.title, post %>
+        <% if user_signed_in? %>
+            <small>
+           Posted by @<%= post.user.name %>
+            </small>
+            </li>
+      <% end %>
+          <% end %>
+          </ul>
+  </div>
+          </div>
 
