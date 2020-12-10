@@ -1,6 +1,6 @@
 # Active Records Model of Micro-Reddit
 
-This application is a blog app which authenticates and authorizes users. If a user is not signed in, they cannot see the authors of the posts. However, once they sign in, all the author names are visisble. Users also cannot edit the post of other users; they are also restricted to editing their own posts.  
+This is a blog app which authenticates and authorizes users. If a user is not signed in, they cannot see the authors of the posts. However, once they sign in, all the author names are visisble. Users also cannot edit the post of other users; they are also restricted to editing their own posts.  
 
 ![image](https://user-images.githubusercontent.com/43865875/101761969-7a608600-3ae5-11eb-9d98-26d697adbb0d.png)
 
