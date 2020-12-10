@@ -9,12 +9,10 @@
       <% @posts.each do |post| %>
           <li class="list-group-item text-center">
             <%= link_to post.title, post %>
-            <% if user_signed_in? %>
             <small>
-              Posted by @<%= post.user.name %>
+              <%= display_author(post) %>
             </small>
           </li>
-            <% end %>
       <% end %>
     </ul>
   </div>
