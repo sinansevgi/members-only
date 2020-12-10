@@ -62,4 +62,4 @@ Give ⭐ to me on GitHub — it helps!
 
 ## 📝 License
 
-This project is [MIT](lic.url) licensed.  
+This project is [MIT](https://choosealicense.com/licenses/mit/) licensed.  
