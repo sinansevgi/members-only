@@ -4,7 +4,7 @@ This is a blog app which authenticates and authorizes users. If a user is not si
 
 ![image](https://user-images.githubusercontent.com/43865875/101761969-7a608600-3ae5-11eb-9d98-26d697adbb0d.png)
 
-[Live demo link](https://agile-waters-48745.herokuapp.com/)
+[Live demo link](https://tranquil-island-76594.herokuapp.com/)
 
 
 ## Built With
