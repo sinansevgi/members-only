@@ -4,15 +4,21 @@
 
 
     <% @posts.each do |post| %>
-  <%= link_to post.title, post %>
-  <%= post.user. %>
-        <td><%= link_to 'Edit', edit_post_path(post) %></td>
-        <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+    <%= link_to post.title, post %>
+  
+    <% if user_signed_in? %>
+      <%= post.user.name %>
+      <td><%= link_to 'Edit', edit_post_path(post) %></td>
+      <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
     <% end %>
-  </tbody>
-</table>
+  
+    <% end %>
+    
+    <br>
+    <% if user_signed_in? %>
+     <%= link_to 'New Post', new_post_path %>    
+    <% end %>
+    
 
 <br>
 
-<%= link_to 'New Post', new_post_path %>
