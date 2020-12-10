@@ -1,14 +1,19 @@
-# Active Records Model of Micro-Reddit
+# Members Only
 
 This is a blog app which authenticates and authorizes users. If a user is not signed in, they cannot see the authors of the posts. However, once they sign in, all the author names are visisble. Users also cannot edit the post of other users; they are also restricted to editing their own posts.  
 
 ![image](https://user-images.githubusercontent.com/43865875/101761969-7a608600-3ae5-11eb-9d98-26d697adbb0d.png)
+
+[Live demo link](https://agile-waters-48745.herokuapp.com/)
+
 
 ## Built With
 
 - Ruby -v  2.7.2
 - Rails -v 6.0.3.4
 - SQLite3
+- Devise
+- Bootstrap
 
 
 ## Getting Started
