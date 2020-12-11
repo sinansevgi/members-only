@@ -1,0 +1,20 @@
+
+<div class="text-center">
+  <h1>Welcome to Members Only</h1>
+</div>
+<div class="row">
+
+  <div class="col-md-12">
+    <ul class="list-group">
+      <% @posts.each do |post| %>
+          <li class="list-group-item text-center">
+            <%= link_to post.title, post %>
+            <small>
+              <%= display_author(post) %>
+            </small>
+          </li>
+      <% end %>
+    </ul>
+  </div>
+</div>
+
