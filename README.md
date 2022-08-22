@@ -31,7 +31,7 @@ To get this project up and running locally, you must already have Ruby, the nece
 5. Run ```bundle install```.
 6. Run ```yarn install```.
 7. Run ```rails db:migrate```.
-8. Run ```rails server``` or ```rails s```.
+8. Run ```rails server``` or `rails s`.
 
 
 ## Author Details:
